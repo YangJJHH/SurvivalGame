@@ -6,6 +6,13 @@ public class PlayerCtrl : MonoBehaviour
 {
     public float moveSpeed;
     private Rigidbody rg;
+    [SerializeField]
+    private float cameraRotationLimit;
+    private float currentCameraRotationX = 0f;
+    public Camera theCamera;
+
+    [SerializeField]
+    private float lookSensitivity;
     // Start is called before the first frame update
    
    void Start(){
@@ -18,7 +25,6 @@ public class PlayerCtrl : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
         Vector3  dir = new Vector3(h,0,v).normalized;
-        rg.velocity = dir * moveSpeed;
-        transform.LookAt(transform.position + dir);
+       transform.Translate(dir*moveSpeed*Time.deltaTime);
     }
 }
