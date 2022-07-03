@@ -4,27 +4,40 @@ using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
-    public float moveSpeed;
-    private Rigidbody rg;
-    [SerializeField]
-    private float cameraRotationLimit;
-    private float currentCameraRotationX = 0f;
-    public Camera theCamera;
+    float hAxis;
+    float vAxis;
+    bool rDown;
 
-    [SerializeField]
-    private float lookSensitivity;
+    Vector3 moveVec;
+    public float moveSpeed;
+    Animator anim;
     // Start is called before the first frame update
    
-   void Start(){
-    rg = GetComponent<Rigidbody>();
+   void Awake(){
+        anim = GetComponentInChildren<Animator>();
    }
 
     // Update is called once per frame
     void Update()
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
-        Vector3  dir = new Vector3(h,0,v).normalized;
-       transform.Translate(dir*moveSpeed*Time.deltaTime);
+        Move();
+    }
+
+    void Move(){
+        hAxis = Input.GetAxisRaw("Horizontal");
+        vAxis = Input.GetAxisRaw("Vertical");
+        rDown = Input.GetButton("Run");
+
+        moveVec = new Vector3(hAxis,0,vAxis).normalized;
+
+
+        //쉬프트키 눌렀을경우 속도증가, 아닐경우 속도감소
+        transform.position += moveVec * moveSpeed * (rDown ? 1f : 0.3f)* Time.deltaTime ;
+
+        anim.SetBool("isWalk", moveVec != Vector3.zero);
+        anim.SetBool("isRun", rDown);
+
+        transform.LookAt(transform.position + moveVec);
+        
     }
 }
