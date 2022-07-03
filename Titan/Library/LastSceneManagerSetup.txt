@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/CityScene.unity
+=======
+- path: Assets/Assets/Polylised - Medieval Desert City/Demo/Assets_Layout.unity
+>>>>>>> cb34dbe592cf42b7351162071bab968e298b27c6
   isLoaded: 1
   isActive: 1
   isSubScene: 0
