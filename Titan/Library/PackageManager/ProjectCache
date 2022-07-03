@@ -5,16 +5,26 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637924159177623836
-    m_Hash: 3664298540
+<<<<<<< HEAD
+      ticks: 637924153692257739
+    m_Hash: 420171339
+=======
+      ticks: 637924085218394809
+    m_Hash: 1179235663
+>>>>>>> cb34dbe592cf42b7351162071bab968e298b27c6
   m_LockFileStatus:
     m_FilePath: D:/Titan/Titan/Titan/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637924159177633807
-    m_Hash: 2298654765
+<<<<<<< HEAD
+      ticks: 637924153693217718
+    m_Hash: 76324656
+=======
+      ticks: 637924085218411050
+    m_Hash: 4124369080
+>>>>>>> cb34dbe592cf42b7351162071bab968e298b27c6
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -27,7 +37,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.8.6
   source: 1
-  resolvedPath: D:\Titan\Titan\Titan\Library\PackageCache\com.unity.cinemachine@2.8.6
+  resolvedPath: F:\Titan\Titan\Titan\Library\PackageCache\com.unity.cinemachine@2.8.6
   assetPath: Packages/com.unity.cinemachine
   name: com.unity.cinemachine
   displayName: Cinemachine
@@ -611,7 +621,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.3.0
   source: 1
-  resolvedPath: D:\Titan\Titan\Titan\Library\PackageCache\com.unity.inputsystem@1.3.0
+  resolvedPath: F:\Titan\Titan\Titan\Library\PackageCache\com.unity.inputsystem@1.3.0
   assetPath: Packages/com.unity.inputsystem
   name: com.unity.inputsystem
   displayName: Input System
